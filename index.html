@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Digital Sandbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- CONTAINER 1: BUY NOW SCREEN -->
+    <div id="checkout-view" class="card">
+        <h1>Premium Content Access</h1>
+        <p>Unlock full access to our simulated dashboard tools.</p>
+        <button id="buy-btn" class="btn">Buy Now</button>
+        <div id="error-box" class="error-msg"></div>
+    </div>
+
+    <!-- CONTAINER 2: SUCCESS SCREEN (Hidden by default) -->
+    <div id="success-view" class="card hidden">
+        <h1 class="success-title">🎉 Payment Successful!</h1>
+        <p>Your simulated transaction cleared securely. Your access token is now active.</p>
+        <button onclick="window.location.search=''" class="btn">Return Home</button>
+    </div>
+
+    <!-- CONTAINER 3: CANCEL SCREEN (Hidden by default) -->
+    <div id="cancel-view" class="card hidden">
+        <h1 class="cancel-title">⚠️ Checkout Canceled</h1>
+        <p>The checkout process was aborted. No simulated changes were made.</p>
+        <button onclick="window.location.search=''" class="btn">Try Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- CONTAINER 4: PREMIUM DASHBOARD VIEW -->
+<div id="dashboard-view" class="dashboard-container hidden">
+    <header class="dash-header">
+        <div>
+            <span class="badge">Premium Account</span>
+            <h2 id="dash-user">Sandbox User: Dev_01</h2>
+        </div>
+        <button onclick="window.location.search=''" class="btn-secondary">Log Out</button>
+    </header>
+
+    <div class="dash-grid">
+        <!-- Metric Card 1 -->
+        <div class="metric-card">
+            <h3>Simulated Balance</h3>
+            <div class="metric-value">$250,000.00</div>
+            <p class="metric-stat text-success">↑ 12.4% this month</p>
+        </div>
+        <!-- Metric Card 2 -->
+        <div class="metric-card">
+            <h3>Active Safe Vaults</h3>
+            <div class="metric-value">3</div>
+            <p class="metric-stat text-muted">All protocols fully verified</p>
+        </div>
+    </div>
+
+    <div class="data-table-container">
+        <h3>System Audit Logs</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Just Now</td>
+                    <td>Stripe Webhook Verification</td>
+                    <td><span class="status-tag success">Verified</span></td>
+                </tr>
+                <tr>
+                    <td>5 mins ago</td>
+                    <td>Checkout Session Initialization</td>
+                    <td><span class="status-tag success">Completed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
